@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import sys 
+import sys
 
 """
 Implement the different exploration strategies.
@@ -91,7 +91,8 @@ def plot(regrets):
 if __name__ == '__main__':
   no_rounds = 1000000
   def schedule(mab, epsilon_init):
-    raise NotImplementedError()
+    # raise NotImplementedError()
+    return (1 - mab.no_actions()/no_rounds) * epsilon_init
 
   epsilon = 0.5
   epsilon_init = 0.6
